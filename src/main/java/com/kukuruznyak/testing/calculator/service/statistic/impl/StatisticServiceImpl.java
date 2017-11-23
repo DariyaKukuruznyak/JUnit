@@ -14,7 +14,7 @@ public class StatisticServiceImpl implements StatisticService {
             case ADD:
                 addOperation++;
                 break;
-            case SUBSTRACT:
+            case SUBTRACT:
                 subtractOperation++;
                 break;
             case MULTIPLY:
@@ -30,7 +30,7 @@ public class StatisticServiceImpl implements StatisticService {
         switch (operation) {
             case ADD:
                 return addOperation;
-            case SUBSTRACT:
+            case SUBTRACT:
                 return subtractOperation;
             case MULTIPLY:
                 return multiplyOperation;

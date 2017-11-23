@@ -36,15 +36,19 @@ public class Calculator {
         switch (operation) {
             case ADD:
                 resultObject = countingService.add(param1, param2);
+                statisticService.increaseOperation(Operation.ADD);
                 break;
-            case SUBSTRACT:
+            case SUBTRACT:
                 resultObject = countingService.subtract(param1, param2);
+                statisticService.increaseOperation(Operation.SUBTRACT);
                 break;
             case MULTIPLY:
                 resultObject = countingService.multiply(param1, param2);
+                statisticService.increaseOperation(Operation.MULTIPLY);
                 break;
             case DIVIDE:
                 resultObject = countingService.divide(param1, param2);
+                statisticService.increaseOperation(Operation.DIVIDE);
                 break;
             default:
                 resultObject = new ComplexObject();

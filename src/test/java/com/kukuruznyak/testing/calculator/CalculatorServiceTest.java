@@ -48,7 +48,7 @@ public class CalculatorServiceTest {
         ComplexObject expectedObject = new ComplexObject(0, 0, Service.CAMSUNG);
 
         Mockito.when(countingService.subtract(complexObject1, complexObject2)).thenReturn(expectedObject);
-        ComplexObject resultObject = calculator.operate(complexObject1, complexObject2, Operation.SUBSTRACT);
+        ComplexObject resultObject = calculator.operate(complexObject1, complexObject2, Operation.SUBTRACT);
         Assert.assertEquals(expectedObject, resultObject);
         Mockito.verify(countingService, Mockito.times(1)).subtract(complexObject1, complexObject2);
     }
@@ -57,7 +57,7 @@ public class CalculatorServiceTest {
     public void subtractDifferentObjects() throws Exception {
         ComplexObject complexObject1 = new ComplexObject(0, 0, Service.CAMSUNG);
         ComplexObject complexObject2 = new ComplexObject(0, 0, Service.HAPPLE);
-        calculator.operate(complexObject1, complexObject2, Operation.SUBSTRACT);
+        calculator.operate(complexObject1, complexObject2, Operation.SUBTRACT);
     }
 
     @Test
