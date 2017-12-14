@@ -60,10 +60,10 @@ public class Calculator {
     }
 
     private void validate(ComplexObject param1, ComplexObject param2) {
-        validationServiceMap.get(param1.getService()).validateValues(param1);
-        validationServiceMap.get(param2.getService()).validateValues(param2);
         if (!param1.getService().equals(param2.getService())) {
             throw new IllegalArgumentException("The services of objects are different");
         }
+        validationServiceMap.get(param1.getService()).validateValues(param1);
+        validationServiceMap.get(param2.getService()).validateValues(param2);
     }
 }
