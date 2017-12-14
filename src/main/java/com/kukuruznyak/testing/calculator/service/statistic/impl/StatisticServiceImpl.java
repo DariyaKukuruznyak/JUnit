@@ -4,10 +4,10 @@ import com.kukuruznyak.testing.calculator.domain.Operation;
 import com.kukuruznyak.testing.calculator.service.statistic.StatisticService;
 
 public class StatisticServiceImpl implements StatisticService {
-    private static int addOperation;
-    private static int subtractOperation;
-    private static int multiplyOperation;
-    private static int divideOperation;
+    private int addOperation;
+    private int subtractOperation;
+    private int multiplyOperation;
+    private int divideOperation;
 
     public void increaseOperation(Operation operation) {
         switch (operation) {
